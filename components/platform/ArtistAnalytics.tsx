@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts"
 import type { ArtistStats } from "@/types/platform"
+import Image from "next/image"
 
 // Mock data
 const mockArtistData: ArtistStats = {
@@ -189,7 +190,7 @@ export default function ArtistAnalytics() {
                       key={track.id}
                       className="flex items-center gap-4 p-4 rounded-lg bg-background border border-border hover:border-primary/50 transition-colors"
                     >
-                      <img
+                      <Image
                         src={track.cover_image_url || "/placeholder.svg"}
                         alt={track.title}
                         className="w-16 h-16 rounded-lg object-cover"

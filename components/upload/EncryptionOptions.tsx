@@ -51,7 +51,7 @@ export function EncryptionOptions({ enabled, onToggle, password, onPasswordChang
               <Shield className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
               <p className="text-xs text-muted-foreground">
                 Your files will be encrypted using your wallet address and password before upload. Keep your password
-                safe - you'll need it to decrypt your files.
+                safe - you&apos;ll need it to decrypt your files.
               </p>
             </div>
 

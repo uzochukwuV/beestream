@@ -22,6 +22,7 @@ import {
   Check,
 } from "lucide-react"
 import { useState } from "react"
+import Image from "next/image"
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -88,7 +89,7 @@ export default function Home() {
           </motion.p>
 
           <motion.p variants={fadeInUp} className="text-lg text-muted-foreground/80 mb-12 max-w-2xl mx-auto">
-            Built on Filecoin's decentralized storage network, BeeStream ensures your music is永久 stored,
+            Built on Filecoin&apos;s decentralized storage network, BeeStream ensures your music is永久 stored,
             censorship-resistant, and truly yours. No middlemen. No takedowns. Just pure creative freedom.
           </motion.p>
 
@@ -294,7 +295,7 @@ export default function Home() {
             <motion.div variants={fadeInUp} className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-3xl" />
               <div className="relative p-8 bg-card border border-border rounded-3xl">
-                <img
+                <Image
                   src="/modern-music-streaming-interface-with-colorful-wav.jpg"
                   alt="Music Streaming Interface"
                   className="w-full h-auto rounded-2xl"
@@ -466,7 +467,7 @@ export default function Home() {
           <motion.div variants={fadeInUp} className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold mb-6">Built on Cutting-Edge Technology</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Powered by Filecoin's decentralized storage network and blockchain technology
+              Powered by Filecoin&apos;s decentralized storage network and blockchain technology
             </p>
           </motion.div>
 
@@ -526,7 +527,7 @@ export default function Home() {
           <motion.div variants={fadeInUp}>
             <h2 className="text-5xl md:text-7xl font-bold mb-8 text-balance">Ready to Join the Revolution?</h2>
             <p className="text-2xl text-muted-foreground mb-12 text-balance">
-              Whether you're an artist, listener, or investor, BeeStream has a place for you
+              Whether you&apos;re an artist, listener, or investor, BeeStream has a place for you
             </p>
 
             <div className="flex flex-wrap gap-6 justify-center">

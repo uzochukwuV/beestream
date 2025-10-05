@@ -35,7 +35,7 @@ export function ColorGradientPicker({ colors, onChange }: ColorGradientPickerPro
             <Palette className="w-5 h-5 text-primary" />
             Visual Theme
           </h3>
-          <p className="text-sm text-muted-foreground">Choose a gradient that matches your music's vibe</p>
+          <p className="text-sm text-muted-foreground">Choose a gradient that matches your music&apos;s vibe</p>
         </div>
         <button
           onClick={() => setCustomMode(!customMode)}
