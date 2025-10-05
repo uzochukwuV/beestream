@@ -31,14 +31,14 @@ export default function Provider({
   return (
     <html lang="en">
       <head>
-        <title>Filecoin onchain cloud demo</title>
+        <title>BeeStream</title>
         <meta
           name="description"
-          content="Demo dApp Powered by synapse-sdk. Upload files to Filecoin with USDFC."
+          content="BeeStream , Music Streaming powered by Filecoin synpase and warm stoage"
         />
         <meta
           name="keywords"
-          content="Filecoin, Demo, synapse-sdk, pdp, upload, filecoin, usdfc"
+          content="Filecoin, BeeStream, synapse-sdk, pdp, upload, filecoin, usdfc"
         />
         <meta name="author" content="FIL-Builders" />
         <meta name="viewport" content="width=device-width, initial-scale=0.6" />
