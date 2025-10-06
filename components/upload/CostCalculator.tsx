@@ -31,8 +31,8 @@ export function CostCalculator({ fileSize }: CostCalculatorProps) {
 
         const balanceData = await fetchWarmStorageBalanceData(synapse, fileSize, config.persistencePeriod)
 
-        const totalCost = balanceData.costs.total
-        const formattedCost = formatUnits(totalCost, 6)
+        const totalCost = balanceData.costs.perEpoch
+        const formattedCost = formatUnits(totalCost, 18)
         setCost(formattedCost)
       } catch (error) {
         console.error("Failed to calculate cost:", error)

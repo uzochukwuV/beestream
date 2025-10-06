@@ -49,7 +49,7 @@ export const useFileUpload = () => {
       });
 
       // 4) Get dataset
-      const { providerId } = await getDataset(synapse, address);
+      const { providerId, dataset } = await getDataset(synapse, address);
       // 5) Check if we have a dataset
       const datasetExists = !!providerId;
       // Include proofset creation fee if no proofset exists
@@ -81,10 +81,11 @@ export const useFileUpload = () => {
 
       // 8) Create storage service with enhanced error handling
       const storageService = await synapse.createStorage({
-        providerId: 2,
-        forceCreateDataSet: true,
+        providerId: dataset?.providerId || providerId,
+        forceCreateDataSet: false,
         // dataSetId: 25,
-        uploadBatchSize: 5,
+        uploadBatchSize: 1,
+        withCDN: true,
         callbacks: {
           
           onDataSetResolved: (info) => {
@@ -125,6 +126,7 @@ export const useFileUpload = () => {
 
       setStatus("📁 Uploading file to storage provider...");
       setProgress(55);
+      
       // 8) Upload file to storage provider
       const { pieceCid } = await storageService.upload(uint8ArrayBytes, {
         onUploadComplete: (piece) => {
@@ -137,9 +139,6 @@ export const useFileUpload = () => {
             fileSize: file.size,
             pieceCid: piece.toV1().toString(),
           }));
-
-
-          
           setProgress(80);
         },
         onPieceAdded: (transactionResponse) => {

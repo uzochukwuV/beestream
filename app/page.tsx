@@ -296,6 +296,8 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-3xl" />
               <div className="relative p-8 bg-card border border-border rounded-3xl">
                 <Image
+                  width={600}
+                  height={600}
                   src="/modern-music-streaming-interface-with-colorful-wav.jpg"
                   alt="Music Streaming Interface"
                   className="w-full h-auto rounded-2xl"

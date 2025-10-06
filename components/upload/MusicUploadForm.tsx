@@ -111,7 +111,7 @@ export function MusicUploadForm() {
   }
 
   if (isUploading) {
-    return (
+    return (<>
       <UploadProgress
         progress={progress}
         status={status}
@@ -119,6 +119,13 @@ export function MusicUploadForm() {
         isComplete={progress === 100}
         onStartOver={handleReset}
       />
+      <button onClick={()=> {
+        setCurrentStep(1)
+        setIsUploading(false)
+      }}>
+                Back
+              </button>
+      </>
     )
   }
 
@@ -250,8 +257,12 @@ export function MusicUploadForm() {
                   </>
                 )}
               </button>
+              
             )}
           </div>
+          <button onClick={()=> setCurrentStep((prev)=> prev -1)}>
+                Back
+              </button>
         </div>
 
         {/* Preview Sidebar */}
